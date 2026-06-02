@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+<title>Nuggets de Caja</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0;-webkit-tap-highlight-color:rgba(0,0,0,0.05)}
+body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;background:#f5f5f0;display:flex;justify-content:center}
+.app{background:#fff;max-width:420px;width:100%;min-height:100vh}
+
+.hdr{padding:1.25rem 1rem 1rem;border-bottom:0.5px solid rgba(0,0,0,0.1)}
+.hdr-label{font-size:10px;letter-spacing:0.09em;text-transform:uppercase;color:#888;font-weight:500;margin-bottom:5px}
+.hdr-title{font-size:20px;font-weight:500;color:#111;margin-bottom:2px}
+.hdr-sub{font-size:12px;color:#666}
+.hdr-pill{display:inline-flex;align-items:center;gap:5px;margin-top:10px;background:#FCEBEB;border-radius:100px;padding:4px 10px;font-size:11px;color:#791F1F;font-weight:500}
+
+.section-lbl{padding:12px 1rem 4px;font-size:10px;letter-spacing:0.08em;text-transform:uppercase;color:#999;font-weight:500}
+
+a.row{display:flex;align-items:center;border-bottom:0.5px solid rgba(0,0,0,0.08);width:100%;text-decoration:none;cursor:pointer;background:#fff}
+a.row:active{background:#FCEBEB}
+.row-left{width:4px;align-self:stretch;background:#E24B4A;flex-shrink:0}
+.row-left.dim{background:#ddd}
+.row-inner{display:flex;align-items:center;gap:12px;padding:13px 1rem;flex:1;min-width:0}
+.num{min-width:38px;height:38px;border-radius:8px;background:#FCEBEB;display:flex;align-items:center;justify-content:center;flex-direction:column;flex-shrink:0}
+.num-br{font-size:8px;font-weight:500;color:#791F1F;letter-spacing:0.06em;text-transform:uppercase;line-height:1}
+.num-n{font-size:16px;font-weight:500;color:#A32D2D;line-height:1.1}
+.row-text{flex:1;min-width:0}
+.row-title{font-size:13px;font-weight:500;color:#111;line-height:1.35;margin-bottom:3px}
+.row-quote{font-size:11px;color:#aaa;line-height:1.4;font-style:italic}
+.row-arr{color:#bbb;font-size:20px;flex-shrink:0;padding-right:4px;color:#A32D2D}
+.soon-tag{font-size:10px;color:#aaa;border:0.5px solid #ddd;border-radius:100px;padding:2px 8px;white-space:nowrap;flex-shrink:0}
+
+.footer{padding:12px 1rem;border-top:0.5px solid rgba(0,0,0,0.08)}
+.add-btn{width:100%;border:0.5px dashed #ccc;border-radius:8px;padding:9px;font-size:12px;color:#aaa;background:none;cursor:pointer;display:flex;align-items:center;justify-content:center;gap:6px;font-family:inherit}
+
+.page{display:none}
+.page.on{display:block}
+
+.cv-top{display:flex;align-items:center;gap:10px;padding:0.75rem 1rem;border-bottom:0.5px solid rgba(0,0,0,0.08)}
+.cv-back{background:none;border:0.5px solid #ddd;border-radius:8px;padding:10px 14px;font-size:13px;color:#666;cursor:pointer;font-family:inherit;min-height:44px;display:flex;align-items:center;gap:5px}
+.cv-back:active{background:#f0f0ee}
+.cv-badge{background:#FCEBEB;border-radius:8px;padding:4px 10px;font-size:12px;font-weight:500;color:#A32D2D}
+.cv-name{font-size:13px;color:#888;flex:1}
+
+.prog-track{height:2px;background:#f0f0ee}
+.prog-fill{height:100%;background:#E24B4A;transition:width 0.25s ease}
+.prog-label{font-size:11px;color:#aaa;text-align:right;padding:5px 1rem 0}
+
+.slide{display:none;padding:1.1rem 1rem}
+.slide.on{display:block}
+.slide-tag{display:inline-flex;align-items:center;gap:5px;font-size:10px;letter-spacing:0.08em;text-transform:uppercase;font-weight:500;margin-bottom:10px}
+.t-sit{color:#185FA5}.t-why{color:#A32D2D}.t-react{color:#0F6E56}.t-decir{color:#3B6D11}.t-close{color:#854F0B}
+.slide-h{font-size:15px;font-weight:500;color:#111;line-height:1.4;margin-bottom:10px}
+.slide-p{font-size:13px;color:#666;line-height:1.6;margin-bottom:8px}
+
+.chip{background:#FCEBEB;border-radius:8px;padding:9px 12px;margin-bottom:8px}
+.chip-lbl{font-size:9px;letter-spacing:0.08em;text-transform:uppercase;font-weight:500;color:#791F1F;margin-bottom:3px}
+.chip-text{font-size:13px;color:#501313;font-style:italic;line-height:1.45}
+
+.box{background:#f8f8f6;border-radius:8px;padding:10px 12px;margin-bottom:8px}
+.box-lbl{font-size:9px;letter-spacing:0.08em;text-transform:uppercase;font-weight:500;margin-bottom:4px}
+.lbl-ask{color:#185FA5}.lbl-say{color:#0F6E56}.lbl-say2{color:#3B6D11}
+.box-text{font-size:13px;color:#111;line-height:1.6}
+
+.callout{border-left:2px solid #E24B4A;padding:9px 12px;margin-bottom:8px;font-size:13px;color:#555;line-height:1.55}
+.book{font-size:11px;color:#aaa;font-style:italic;text-align:center;padding:4px 0 2px}
+
+.nav{display:flex;gap:8px;padding:0.75rem 1rem;border-top:0.5px solid rgba(0,0,0,0.08)}
+a.n-prev{border:0.5px solid #ddd;background:#fff;border-radius:8px;padding:12px 16px;font-size:14px;color:#666;cursor:pointer;display:none;align-items:center;gap:5px;text-decoration:none;min-height:44px;justify-content:center}
+a.n-prev:active{background:#f0f0ee}
+a.n-next{flex:1;background:#A32D2D;color:#fff;border:none;border-radius:8px;padding:12px 16px;font-size:14px;font-weight:500;cursor:pointer;display:flex;align-items:center;justify-content:center;gap:6px;text-decoration:none;min-height:44px}
+a.n-next:active{background:#791F1F}
+</style>
+</head>
+<body>
+<div class="app">
+
+<div id="p-index" class="page on">
+  <div class="hdr">
+    <div class="hdr-label">Biblioteca · Nuggets de Caja</div>
+    <div class="hdr-title">Banderas rojas</div>
+    <div class="hdr-sub">Situaciones frente a las cuales hay que reaccionar.</div>
+    <div class="hdr-pill">⚠ 7 alertas registradas</div>
+  </div>
+
+  <div class="section-lbl">Información financiera</div>
+  <a href="#" class="row" onclick="openCard();return false;">
+    <div class="row-left"></div>
+    <div class="row-inner">
+      <div class="num"><span class="num-br">BR</span><span class="num-n">1</span></div>
+      <div class="row-text">
+        <div class="row-title">El cliente no comparte información financiera con su equipo</div>
+        <div class="row-quote">Me van a pedir aumento · Se van a asustar</div>
+      </div>
+      <div class="row-arr">›</div>
+    </div>
+  </a>
+
+  <div class="section-lbl">Gestión de caja</div>
+  <a href="#" class="row" onclick="return false;"><div class="row-left dim"></div><div class="row-inner"><div class="num"><span class="num-br">BR</span><span class="num-n">2</span></div><div class="row-text"><div class="row-title">Está tranquilo porque llegó un crédito bancario</div><div class="row-quote">Estamos bien, nos llegó el crédito</div></div><div class="soon-tag">Pronto</div></div></a>
+  <a href="#" class="row" onclick="return false;"><div class="row-left dim"></div><div class="row-inner"><div class="num"><span class="num-br">BR</span><span class="num-n">3</span></div><div class="row-text"><div class="row-title">Sin indicador de caja en el PEUP</div><div class="row-quote">Nunca lo hemos tenido</div></div><div class="soon-tag">Pronto</div></div></a>
+  <a href="#" class="row" onclick="return false;"><div class="row-left dim"></div><div class="row-inner"><div class="num"><span class="num-br">BR</span><span class="num-n">6</span></div><div class="row-text"><div class="row-title">Redujeron el plazo de pago a proveedores</div><div class="row-quote">Mejoramos las cuentas por pagar</div></div><div class="soon-tag">Pronto</div></div></a>
+
+  <div class="section-lbl">Planificación</div>
+  <a href="#" class="row" onclick="return false;"><div class="row-left dim"></div><div class="row-inner"><div class="num"><span class="num-br">BR</span><span class="num-n">4</span></div><div class="row-text"><div class="row-title">La meta del primer trimestre es perder plata</div><div class="row-quote">El Q1 siempre es negativo</div></div><div class="soon-tag">Pronto</div></div></a>
+  <a href="#" class="row" onclick="return false;"><div class="row-left dim"></div><div class="row-inner"><div class="num"><span class="num-br">BR</span><span class="num-n">5</span></div><div class="row-text"><div class="row-title">Resolver caja con aumento de ventas</div><div class="row-quote">Si vendemos más, se soluciona</div></div><div class="soon-tag">Pronto</div></div></a>
+
+  <div class="section-lbl">Relación con proveedores</div>
+  <a href="#" class="row" onclick="return false;"><div class="row-left dim"></div><div class="row-inner"><div class="num"><span class="num-br">BR</span><span class="num-n">7</span></div><div class="row-text"><div class="row-title">Creencia: el proveedor no acepta plazos</div><div class="row-quote">Los chinos no dan crédito</div></div><div class="soon-tag">Pronto</div></div></a>
+
+  <div class="footer">
+    <button class="add-btn">+ Agregar bandera roja</button>
+  </div>
+</div>
+
+<div id="p-card" class="page">
+  <div class="cv-top">
+    <button class="cv-back" onclick="closeCard()">← Índice</button>
+    <div class="cv-badge">BR 1</div>
+    <div class="cv-name">Información financiera</div>
+  </div>
+  <div class="prog-track"><div class="prog-fill" id="prog" style="width:17%"></div></div>
+  <div class="prog-label" id="prog-lbl">1 de 6</div>
+
+  <div id="s0" class="slide on">
+    <div class="slide-tag t-sit">● Situación en sesión</div>
+    <div class="slide-h">El cliente no comparte información financiera con su equipo y no está seguro de hacerlo.</div>
+    <div class="slide-p">Teme que el equipo no sepa manejar la información o que haya consecuencias negativas.</div>
+    <div class="chip"><div class="chip-lbl">Frases frecuentes del cliente</div><div class="chip-text">"Me van a pedir todos aumento de sueldo"</div></div>
+    <div class="chip"><div class="chip-text">"Se van a asustar con los resultados"</div></div>
+  </div>
+
+  <div id="s1" class="slide">
+    <div class="slide-tag t-why">● ¿Por qué es bandera roja?</div>
+    <div class="slide-h">El equipo sin datos imagina que la empresa gana mucho más de lo real.</div>
+    <div class="callout">El equipo que no conoce las finanzas tiende a imaginar que la empresa gana más de lo real. Eso crea frustración y pedidos de recursos que no existen. La transparencia bien llevada genera confianza y compromiso.</div>
+    <div class="slide-p">Casi siempre ocurre lo contrario a lo que el cliente teme.</div>
+  </div>
+
+  <div id="s2" class="slide">
+    <div class="slide-tag t-react">● Reacción — preguntar</div>
+    <div class="slide-h">Primero preguntar, luego decir.</div>
+    <div class="box"><div class="box-lbl lbl-ask">Preguntar</div><div class="box-text">¿Qué te asusta de compartir la información financiera con tu equipo?</div></div>
+    <div class="box"><div class="box-lbl lbl-ask">Preguntar</div><div class="box-text">¿Cuánto crees tú que piensa el equipo que está ganando la empresa?</div></div>
+  </div>
+
+  <div id="s3" class="slide">
+    <div class="slide-tag t-decir">● Decir 1</div>
+    <div class="slide-h">El equipo ya habla entre ellos. La pregunta es si juegan con información o sin ella.</div>
+    <div class="box"><div class="box-lbl lbl-say">Decir</div><div class="box-text">En general, los equipos piensan que la empresa gana mucho más de lo real. Hablan entre ellos, conocen tus facturas, googlean. Al final muchos piensan que te llevas la plata en carretilla, y sabemos que no es así —buena parte se reinvierte en capital de trabajo o el EBITDA simplemente no es tan grande. Cuando el equipo no conoce la situación financiera, no tiene cómo entender las limitaciones de la empresa y se transforma en pedidor de recursos. Es como jugar un partido de fútbol sin saber si vamos ganando 3-0, empatando o perdiendo 3-0. Al saberlo, se juega distinto. Compartir los números no depende del equipo: depende de tu decisión de confiar en él. Y cuando lo haces, el equipo deja de pensar en cómo mejorar solo su área y empieza a pensar en cómo mejorar el negocio. Se genera una accountability que no puedes lograr de otra forma. El equipo entiende que hay que priorizar focos y aceptar ciertos sacrificios para tener una operación ágil y rentable. Eso se aprende mirando los números. Y ese equipo que entiende los números, es el que te va a acompañar a escalar el negocio.</div></div>
+  </div>
+
+  <div id="s4" class="slide">
+    <div class="slide-tag t-decir">● Decir 2</div>
+    <div class="slide-h">Si los resultados son malos, es todavía más importante que el equipo lo sepa.</div>
+    <div class="box"><div class="box-lbl lbl-say2">Decir</div><div class="box-text">Si los resultados son malos, es todavía más importante que el equipo lo sepa. Sin esa información, no hay cómo tomar las medidas necesarias y el equipo sigue pidiendo recursos que no existen. Salir de las pérdidas se logra más rápido con la colaboración del equipo. Para hacerlo debes tener la certeza de que saldremos de esta situación. Jim Collins lo llama la paradoja de Stockdale: hay que enfrentar la brutal realidad tal como es, con la confianza de que vamos a salir adelante.</div></div>
+  </div>
+
+  <div id="s5" class="slide">
+    <div class="slide-tag t-close">● Cierre</div>
+    <div class="slide-h">Avanzar al ritmo del cliente.</div>
+    <div class="box"><div class="box-lbl lbl-ask">Preguntar</div><div class="box-text">¿Qué hacemos? ¿Qué podemos compartir en esta etapa?</div></div>
+    <div class="slide-p">Avanzar al ritmo del cliente, de lo que puede compartir con seguridad.</div>
+    <div class="book">📖 Recomendación: Great Game of Business · Jack Stack</div>
+  </div>
+
+  <div class="nav">
+    <a href="#" class="n-prev" id="btn-p" onclick="prev();return false;">← Anterior</a>
+    <a href="#" class="n-next" id="btn-n" onclick="next();return false;">Siguiente →</a>
+  </div>
+</div>
+
+</div>
+<script>
+var cur=0,TOT=6;
+function openCard(){
+  cur=0;
+  document.getElementById('p-index').classList.remove('on');
+  document.getElementById('p-card').classList.add('on');
+  window.scrollTo(0,0);
+  render();
+}
+function closeCard(){
+  document.getElementById('p-card').classList.remove('on');
+  document.getElementById('p-index').classList.add('on');
+  window.scrollTo(0,0);
+}
+function render(){
+  for(var i=0;i<TOT;i++){
+    var s=document.getElementById('s'+i);
+    if(s) s.className='slide'+(i===cur?' on':'');
+  }
+  document.getElementById('prog').style.width=(((cur+1)/TOT)*100)+'%';
+  document.getElementById('prog-lbl').textContent=(cur+1)+' de '+TOT;
+  var bp=document.getElementById('btn-p');
+  var bn=document.getElementById('btn-n');
+  bp.style.display=cur===0?'none':'flex';
+  if(cur===TOT-1){
+    bn.textContent='← Volver al índice';
+    bn.onclick=function(){closeCard();return false;};
+  } else {
+    bn.textContent='Siguiente →';
+    bn.onclick=function(){next();return false;};
+  }
+}
+function next(){if(cur<TOT-1){cur++;render();window.scrollTo(0,0);}}
+function prev(){if(cur>0){cur--;render();window.scrollTo(0,0);}}
+</script>
+</body>
+</html>
