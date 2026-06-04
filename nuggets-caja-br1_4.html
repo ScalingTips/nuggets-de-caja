@@ -8,15 +8,12 @@
 *{box-sizing:border-box;margin:0;padding:0;-webkit-tap-highlight-color:rgba(0,0,0,0.05)}
 body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;background:#f5f5f0;display:flex;justify-content:center}
 .app{background:#fff;max-width:420px;width:100%;min-height:100vh}
-
 .hdr{padding:1.25rem 1rem 1rem;border-bottom:0.5px solid rgba(0,0,0,0.1)}
 .hdr-label{font-size:10px;letter-spacing:0.09em;text-transform:uppercase;color:#888;font-weight:500;margin-bottom:5px}
 .hdr-title{font-size:20px;font-weight:500;color:#111;margin-bottom:2px}
 .hdr-sub{font-size:12px;color:#666}
 .hdr-pill{display:inline-flex;align-items:center;gap:5px;margin-top:10px;background:#FCEBEB;border-radius:100px;padding:4px 10px;font-size:11px;color:#791F1F;font-weight:500}
-
 .section-lbl{padding:12px 1rem 4px;font-size:10px;letter-spacing:0.08em;text-transform:uppercase;color:#999;font-weight:500}
-
 a.row{display:flex;align-items:center;border-bottom:0.5px solid rgba(0,0,0,0.08);width:100%;text-decoration:none;cursor:pointer;background:#fff}
 a.row:active{background:#FCEBEB}
 .row-left{width:4px;align-self:stretch;background:#E24B4A;flex-shrink:0}
@@ -28,44 +25,35 @@ a.row:active{background:#FCEBEB}
 .row-text{flex:1;min-width:0}
 .row-title{font-size:13px;font-weight:500;color:#111;line-height:1.35;margin-bottom:3px}
 .row-quote{font-size:11px;color:#aaa;line-height:1.4;font-style:italic}
-.row-arr{color:#bbb;font-size:20px;flex-shrink:0;padding-right:4px;color:#A32D2D}
+.row-arr{color:#A32D2D;font-size:20px;flex-shrink:0;padding-right:4px}
 .soon-tag{font-size:10px;color:#aaa;border:0.5px solid #ddd;border-radius:100px;padding:2px 8px;white-space:nowrap;flex-shrink:0}
-
 .footer{padding:12px 1rem;border-top:0.5px solid rgba(0,0,0,0.08)}
 .add-btn{width:100%;border:0.5px dashed #ccc;border-radius:8px;padding:9px;font-size:12px;color:#aaa;background:none;cursor:pointer;display:flex;align-items:center;justify-content:center;gap:6px;font-family:inherit}
-
 .page{display:none}
 .page.on{display:block}
-
 .cv-top{display:flex;align-items:center;gap:10px;padding:0.75rem 1rem;border-bottom:0.5px solid rgba(0,0,0,0.08)}
 .cv-back{background:none;border:0.5px solid #ddd;border-radius:8px;padding:10px 14px;font-size:13px;color:#666;cursor:pointer;font-family:inherit;min-height:44px;display:flex;align-items:center;gap:5px}
 .cv-back:active{background:#f0f0ee}
 .cv-badge{background:#FCEBEB;border-radius:8px;padding:4px 10px;font-size:12px;font-weight:500;color:#A32D2D}
 .cv-name{font-size:13px;color:#888;flex:1}
-
 .prog-track{height:2px;background:#f0f0ee}
 .prog-fill{height:100%;background:#E24B4A;transition:width 0.25s ease}
 .prog-label{font-size:11px;color:#aaa;text-align:right;padding:5px 1rem 0}
-
 .slide{display:none;padding:1.1rem 1rem}
 .slide.on{display:block}
 .slide-tag{display:inline-flex;align-items:center;gap:5px;font-size:10px;letter-spacing:0.08em;text-transform:uppercase;font-weight:500;margin-bottom:10px}
 .t-sit{color:#185FA5}.t-why{color:#A32D2D}.t-react{color:#0F6E56}.t-decir{color:#3B6D11}.t-close{color:#854F0B}
 .slide-h{font-size:15px;font-weight:500;color:#111;line-height:1.4;margin-bottom:10px}
 .slide-p{font-size:13px;color:#666;line-height:1.6;margin-bottom:8px}
-
 .chip{background:#FCEBEB;border-radius:8px;padding:9px 12px;margin-bottom:8px}
 .chip-lbl{font-size:9px;letter-spacing:0.08em;text-transform:uppercase;font-weight:500;color:#791F1F;margin-bottom:3px}
 .chip-text{font-size:13px;color:#501313;font-style:italic;line-height:1.45}
-
 .box{background:#f8f8f6;border-radius:8px;padding:10px 12px;margin-bottom:8px}
 .box-lbl{font-size:9px;letter-spacing:0.08em;text-transform:uppercase;font-weight:500;margin-bottom:4px}
-.lbl-ask{color:#185FA5}.lbl-say{color:#0F6E56}.lbl-say2{color:#3B6D11}
+.lbl-ask{color:#185FA5}.lbl-say{color:#0F6E56}.lbl-say2{color:#3B6D11}.lbl-think{color:#A32D2D}
 .box-text{font-size:13px;color:#111;line-height:1.6}
-
 .callout{border-left:2px solid #E24B4A;padding:9px 12px;margin-bottom:8px;font-size:13px;color:#555;line-height:1.55}
 .book{font-size:11px;color:#aaa;font-style:italic;text-align:center;padding:4px 0 2px}
-
 .nav{display:flex;gap:8px;padding:0.75rem 1rem;border-top:0.5px solid rgba(0,0,0,0.08)}
 a.n-prev{border:0.5px solid #ddd;background:#fff;border-radius:8px;padding:12px 16px;font-size:14px;color:#666;cursor:pointer;display:none;align-items:center;gap:5px;text-decoration:none;min-height:44px;justify-content:center}
 a.n-prev:active{background:#f0f0ee}
@@ -76,16 +64,17 @@ a.n-next:active{background:#791F1F}
 <body>
 <div class="app">
 
+<!-- ÍNDICE -->
 <div id="p-index" class="page on">
   <div class="hdr">
     <div class="hdr-label">Biblioteca · Nuggets de Caja</div>
     <div class="hdr-title">Banderas rojas</div>
     <div class="hdr-sub">Situaciones frente a las cuales hay que reaccionar.</div>
-    <div class="hdr-pill">⚠ 7 alertas registradas</div>
+    <div class="hdr-pill">⚠ 8 alertas registradas</div>
   </div>
 
   <div class="section-lbl">Información financiera</div>
-  <a href="#" class="row" onclick="openCard();return false;">
+  <a href="#" class="row" onclick="openCard(1);return false;">
     <div class="row-left"></div>
     <div class="row-inner">
       <div class="num"><span class="num-br">BR</span><span class="num-n">1</span></div>
@@ -98,112 +87,277 @@ a.n-next:active{background:#791F1F}
   </a>
 
   <div class="section-lbl">Gestión de caja</div>
-  <a href="#" class="row" onclick="return false;"><div class="row-left dim"></div><div class="row-inner"><div class="num"><span class="num-br">BR</span><span class="num-n">2</span></div><div class="row-text"><div class="row-title">Está tranquilo porque llegó un crédito bancario</div><div class="row-quote">Estamos bien, nos llegó el crédito</div></div><div class="soon-tag">Pronto</div></div></a>
+  <a href="#" class="row" onclick="openCard(2);return false;">
+    <div class="row-left"></div>
+    <div class="row-inner">
+      <div class="num"><span class="num-br">BR</span><span class="num-n">2</span></div>
+      <div class="row-text">
+        <div class="row-title">Está tranquilo porque llegó un crédito bancario</div>
+        <div class="row-quote">Estamos bien, nos llegó el crédito</div>
+      </div>
+      <div class="row-arr">›</div>
+    </div>
+  </a>
   <a href="#" class="row" onclick="return false;"><div class="row-left dim"></div><div class="row-inner"><div class="num"><span class="num-br">BR</span><span class="num-n">3</span></div><div class="row-text"><div class="row-title">Sin indicador de caja en el PEUP</div><div class="row-quote">Nunca lo hemos tenido</div></div><div class="soon-tag">Pronto</div></div></a>
-  <a href="#" class="row" onclick="return false;"><div class="row-left dim"></div><div class="row-inner"><div class="num"><span class="num-br">BR</span><span class="num-n">6</span></div><div class="row-text"><div class="row-title">Redujeron el plazo de pago a proveedores</div><div class="row-quote">Mejoramos las cuentas por pagar</div></div><div class="soon-tag">Pronto</div></div></a>
+  <a href="#" class="row" onclick="openCard(4);return false;"><div class="row-left"></div><div class="row-inner"><div class="num"><span class="num-br">BR</span><span class="num-n">4</span></div><div class="row-text"><div class="row-title">Redujeron el plazo de pago a proveedores</div><div class="row-quote">Mejoramos las cuentas por pagar</div></div><div class="row-arr">›</div></div></a>
 
   <div class="section-lbl">Planificación</div>
-  <a href="#" class="row" onclick="return false;"><div class="row-left dim"></div><div class="row-inner"><div class="num"><span class="num-br">BR</span><span class="num-n">4</span></div><div class="row-text"><div class="row-title">La meta del primer trimestre es perder plata</div><div class="row-quote">El Q1 siempre es negativo</div></div><div class="soon-tag">Pronto</div></div></a>
-  <a href="#" class="row" onclick="return false;"><div class="row-left dim"></div><div class="row-inner"><div class="num"><span class="num-br">BR</span><span class="num-n">5</span></div><div class="row-text"><div class="row-title">Resolver caja con aumento de ventas</div><div class="row-quote">Si vendemos más, se soluciona</div></div><div class="soon-tag">Pronto</div></div></a>
+  <a href="#" class="row" onclick="openCard(5);return false;"><div class="row-left"></div><div class="row-inner"><div class="num"><span class="num-br">BR</span><span class="num-n">5</span></div><div class="row-text"><div class="row-title">La meta del primer trimestre es perder plata</div><div class="row-quote">El Q1 siempre es negativo</div></div><div class="row-arr">›</div></div></a>
+  <a href="#" class="row" onclick="return false;"><div class="row-left dim"></div><div class="row-inner"><div class="num"><span class="num-br">BR</span><span class="num-n">6</span></div><div class="row-text"><div class="row-title">Resolver caja con aumento de ventas</div><div class="row-quote">Si vendemos más, se soluciona</div></div><div class="soon-tag">Pronto</div></div></a>
+
+  <a href="#" class="row" onclick="return false;"><div class="row-left dim"></div><div class="row-inner"><div class="num"><span class="num-br">BR</span><span class="num-n">7</span></div><div class="row-text"><div class="row-title">El cliente no planifica alzas de precio a pesar de que los costos suben</div><div class="row-quote">"Si subo el precio, pierdo clientes"</div></div><div class="soon-tag">Pronto</div></div></a>
 
   <div class="section-lbl">Relación con proveedores</div>
-  <a href="#" class="row" onclick="return false;"><div class="row-left dim"></div><div class="row-inner"><div class="num"><span class="num-br">BR</span><span class="num-n">7</span></div><div class="row-text"><div class="row-title">Creencia: el proveedor no acepta plazos</div><div class="row-quote">Los chinos no dan crédito</div></div><div class="soon-tag">Pronto</div></div></a>
+  <a href="#" class="row" onclick="return false;"><div class="row-left dim"></div><div class="row-inner"><div class="num"><span class="num-br">BR</span><span class="num-n">8</span></div><div class="row-text"><div class="row-title">Creencia: el proveedor no acepta plazos</div><div class="row-quote">Los chinos no dan crédito</div></div><div class="soon-tag">Pronto</div></div></a>
 
   <div class="footer">
     <button class="add-btn">+ Agregar bandera roja</button>
   </div>
 </div>
 
-<div id="p-card" class="page">
+<!-- CARRUSEL BR1 -->
+<div id="p-card-1" class="page">
   <div class="cv-top">
     <button class="cv-back" onclick="closeCard()">← Índice</button>
     <div class="cv-badge">BR 1</div>
     <div class="cv-name">Información financiera</div>
   </div>
-  <div class="prog-track"><div class="prog-fill" id="prog" style="width:17%"></div></div>
-  <div class="prog-label" id="prog-lbl">1 de 6</div>
+  <div class="prog-track"><div class="prog-fill" id="prog-1"></div></div>
+  <div class="prog-label" id="lbl-1">1 de 6</div>
 
-  <div id="s0" class="slide on">
+  <div id="s1-0" class="slide on">
     <div class="slide-tag t-sit">● Situación en sesión</div>
     <div class="slide-h">El cliente no comparte información financiera con su equipo y no está seguro de hacerlo.</div>
     <div class="slide-p">Teme que el equipo no sepa manejar la información o que haya consecuencias negativas.</div>
     <div class="chip"><div class="chip-lbl">Frases frecuentes del cliente</div><div class="chip-text">"Me van a pedir todos aumento de sueldo"</div></div>
     <div class="chip"><div class="chip-text">"Se van a asustar con los resultados"</div></div>
   </div>
-
-  <div id="s1" class="slide">
+  <div id="s1-1" class="slide">
     <div class="slide-tag t-why">● ¿Por qué es bandera roja?</div>
-    <div class="box"><div class="box-lbl lbl-say" style="color:#A32D2D">Pensar</div><div class="box-text">El cliente tiene miedo de que compartir los números genere caos: que pidan aumentos, que se asusten, que pierdan la confianza. Pero casi siempre ocurre lo contrario. El equipo que no sabe cómo están las finanzas piensa que la empresa gana más de lo que realmente gana, y eso crea frustración. Tienen información parcial de las finanzas que buscan en Google, preguntan o conversan entre ellos. Lo que tú no le dices al equipo, ellos lo completan o interpretan. La transparencia, bien llevada, genera confianza y compromiso.</div></div>
+    <div class="box"><div class="box-lbl lbl-think">Pensar</div><div class="box-text">El cliente tiene miedo de que compartir los números genere caos: que pidan aumentos, que se asusten, que pierdan la confianza. Pero casi siempre ocurre lo contrario. El equipo que no sabe cómo están las finanzas piensa que la empresa gana más de lo que realmente gana, y eso crea frustración. Tienen información parcial de las finanzas que buscan en Google, preguntan o conversan entre ellos. Lo que tú no le dices al equipo, ellos lo completan o interpretan. La transparencia, bien llevada, genera confianza y compromiso.</div></div>
   </div>
-
-  <div id="s2" class="slide">
+  <div id="s1-2" class="slide">
     <div class="slide-tag t-react">● Reacción — preguntar</div>
     <div class="slide-h">Primero preguntar, luego decir.</div>
     <div class="box"><div class="box-lbl lbl-ask">Preguntar</div><div class="box-text">¿Qué te asusta de compartir la información financiera con tu equipo?</div></div>
     <div class="box"><div class="box-lbl lbl-ask">Preguntar</div><div class="box-text">¿Cuánto crees tú que piensa el equipo que está ganando la empresa?</div></div>
   </div>
-
-  <div id="s3" class="slide">
+  <div id="s1-3" class="slide">
     <div class="slide-tag t-decir">● Decir 1</div>
     <div class="slide-h">El equipo ya habla entre ellos. La pregunta es si juegan con información o sin ella.</div>
     <div class="box"><div class="box-lbl lbl-say">Decir</div><div class="box-text">En general, los equipos piensan que la empresa gana mucho más de lo real. Hablan entre ellos, conocen tus facturas, googlean. Al final muchos piensan que te llevas la plata en carretilla, y sabemos que no es así —buena parte se reinvierte en capital de trabajo o el EBITDA simplemente no es tan grande. Cuando el equipo no conoce la situación financiera, no tiene cómo entender las limitaciones de la empresa y se transforma en pedidor de recursos. Es como jugar un partido de fútbol sin saber si vamos ganando 3-0, empatando o perdiendo 3-0. Al saberlo, se juega distinto. Compartir los números no depende del equipo: depende de tu decisión de confiar en él. Y cuando lo haces, el equipo deja de pensar en cómo mejorar solo su área y empieza a pensar en cómo mejorar el negocio. Se genera una accountability que no puedes lograr de otra forma. El equipo entiende que hay que priorizar focos y aceptar ciertos sacrificios para tener una operación ágil y rentable. Eso se aprende mirando los números. Y ese equipo que entiende los números, es el que te va a acompañar a escalar el negocio.</div></div>
   </div>
-
-  <div id="s4" class="slide">
+  <div id="s1-4" class="slide">
     <div class="slide-tag t-decir">● Decir 2</div>
     <div class="slide-h">Si los resultados son malos, es todavía más importante que el equipo lo sepa.</div>
     <div class="box"><div class="box-lbl lbl-say2">Decir</div><div class="box-text">Si los resultados son malos, es todavía más importante que el equipo lo sepa. Sin esa información, no hay cómo tomar las medidas necesarias y el equipo sigue pidiendo recursos que no existen. Salir de las pérdidas se logra más rápido con la colaboración del equipo. Para hacerlo debes tener la certeza de que saldremos de esta situación. Jim Collins lo llama la paradoja de Stockdale: hay que enfrentar la brutal realidad tal como es, con la confianza de que vamos a salir adelante.</div></div>
   </div>
-
-  <div id="s5" class="slide">
+  <div id="s1-5" class="slide">
     <div class="slide-tag t-close">● Cierre</div>
     <div class="slide-h">Avanzar al ritmo del cliente.</div>
     <div class="box"><div class="box-lbl lbl-ask">Preguntar</div><div class="box-text">¿Qué hacemos? ¿Qué podemos compartir en esta etapa?</div></div>
     <div class="slide-p">Avanzar al ritmo del cliente, de lo que puede compartir con seguridad.</div>
     <div class="book">📖 Recomendación: Great Game of Business · Jack Stack</div>
   </div>
-
   <div class="nav">
-    <a href="#" class="n-prev" id="btn-p" onclick="prev();return false;">← Anterior</a>
-    <a href="#" class="n-next" id="btn-n" onclick="next();return false;">Siguiente →</a>
+    <a href="#" class="n-prev" id="bp-1" onclick="prev(1);return false;">← Anterior</a>
+    <a href="#" class="n-next" id="bn-1" onclick="next(1);return false;">Siguiente →</a>
   </div>
 </div>
 
+<!-- CARRUSEL BR2 -->
+<div id="p-card-2" class="page">
+  <div class="cv-top">
+    <button class="cv-back" onclick="closeCard()">← Índice</button>
+    <div class="cv-badge">BR 2</div>
+    <div class="cv-name">Gestión de caja</div>
+  </div>
+  <div class="prog-track"><div class="prog-fill" id="prog-2"></div></div>
+  <div class="prog-label" id="lbl-2">1 de 4</div>
+
+  <div id="s2-0" class="slide on">
+    <div class="slide-tag t-sit">● Situación en sesión</div>
+    <div class="slide-h">Frente a la pregunta ¿cómo está la caja?, el cliente dice que está bien y tranquilo porque le acaba de llegar un crédito bancario.</div>
+    <div class="chip"><div class="chip-lbl">Frase frecuente del cliente</div><div class="chip-text">"Estamos bien, nos acaba de llegar el crédito"</div></div>
+  </div>
+  <div id="s2-1" class="slide">
+    <div class="slide-tag t-why">● ¿Por qué es bandera roja?</div>
+    <div class="box"><div class="box-lbl lbl-think">Pensar</div><div class="box-text">Cuando el cliente dice que está tranquilo porque llegó un crédito, la pregunta que hay que hacerse es si el negocio realmente está generando caja o si estamos tapando un hoyo con otro. Depender del banco o del inversionista para sostener la operación puede ser señal de que algo en el ciclo no está funcionando: se cobra tarde, se negocia mal con proveedores, o los márgenes no alcanzan.</div></div>
+  </div>
+  <div id="s2-2" class="slide">
+    <div class="slide-tag t-react">● Reacción</div>
+    <div class="slide-h">Primero preguntar, luego decir.</div>
+    <div class="box"><div class="box-lbl lbl-ask">Preguntar</div><div class="box-text">Disculpa, pero me preocupa un poco esto. ¿Está la empresa generando caja mes a mes, o necesitamos financiamiento externo para sostener la operación?</div></div>
+    <div class="box"><div class="box-lbl lbl-say">Decir</div><div class="box-text">Entiendo que estés más tranquilo con el crédito. Pero tú sabes cómo funcionan los bancos: te prestan cuando no los necesitas y te cortan el crédito justo cuando más los necesitas. Lo que queremos es que el negocio se financie a sí mismo: que cobres bien, que negocies bien con proveedores y que el ciclo funcione sin depender de financiamiento externo para operar el día a día. Cuando eso ocurre, el crédito deja de ser un salvavidas y se convierte en una herramienta para crecer. Los buenos negocios generan caja mes a mes, y cuando ya generas caja, se puede considerar el financiamiento externo para acelerar el crecimiento. Hay un libro que explica esto muy bien: Customer Funded Business, de John Mullins. Te lo recomiendo.</div></div>
+  </div>
+  <div id="s2-3" class="slide">
+    <div class="slide-tag t-close">● Cierre</div>
+    <div class="slide-h">Avanzar hacia la generación de caja propia.</div>
+    <div class="box"><div class="box-lbl lbl-ask">Preguntar</div><div class="box-text">¿Qué piensas? ¿Quieres que trabajemos la generación de caja con el equipo?</div></div>
+    <div class="book">📖 Recomendación: Customer Funded Business · John Mullins</div>
+  </div>
+  <div class="nav">
+    <a href="#" class="n-prev" id="bp-2" onclick="prev(2);return false;">← Anterior</a>
+    <a href="#" class="n-next" id="bn-2" onclick="next(2);return false;">Siguiente →</a>
+  </div>
 </div>
+
+</div><!-- fin .app -->
+
+<style>
+.dialogo{background:#f8f8f6;border-radius:8px;padding:10px 12px;margin-bottom:8px}
+.d-row{display:flex;gap:8px;margin-bottom:8px;align-items:flex-start}
+.d-row:last-child{margin-bottom:0}
+.d-who{font-size:9px;letter-spacing:0.06em;text-transform:uppercase;font-weight:500;min-width:52px;padding-top:2px;flex-shrink:0}
+.d-coach{color:#0F6E56}
+.d-client{color:#A32D2D}
+.d-text{font-size:13px;color:#111;line-height:1.5}
+.d-text.cliente{font-style:italic;color:#501313}
+</style>
+
+<!-- CARRUSEL BR6 -->
+<div id="p-card-4" class="page">
+  <div class="cv-top">
+    <button class="cv-back" onclick="closeCard()">← Índice</button>
+    <div class="cv-badge">BR 4</div>
+    <div class="cv-name">Relación con proveedores</div>
+  </div>
+  <div class="prog-track"><div class="prog-fill" id="prog-4"></div></div>
+  <div class="prog-label" id="lbl-4">1 de 5</div>
+
+  <div id="s4-0" class="slide on">
+    <div class="slide-tag t-sit">● Situación en sesión</div>
+    <div class="slide-h">Redujeron el plazo de pago a proveedores y lo presentan como un logro de gestión.</div>
+    <div class="slide-p">Al revisar los indicadores del trimestre, el gerente de finanzas o el contador informa con satisfacción que disminuyeron el plazo de las cuentas por pagar.</div>
+    <div class="chip"><div class="chip-lbl">Frase frecuente</div><div class="chip-text">"Mejoramos las cuentas por pagar"</div></div>
+  </div>
+
+  <div id="s4-1" class="slide">
+    <div class="slide-tag t-why">● ¿Por qué es bandera roja?</div>
+    <div class="box"><div class="box-lbl lbl-think">Pensar</div><div class="box-text">Pagar antes es un gesto que se siente responsable, pero desde el punto de vista de la caja es una decisión costosa. Cada día de plazo con un proveedor es un día más de liquidez en la empresa. Cuando una empresa que tiene apretada la caja acorta sus plazos de pago, está financiando a su proveedor, que generalmente tiene mejores condiciones de crédito con su propio capital de trabajo.</div></div>
+  </div>
+
+  <div id="s4-2" class="slide">
+    <div class="slide-tag t-react">● Reacción — preguntar</div>
+    <div class="slide-h">Primero preguntar, luego decir.</div>
+    <div class="box"><div class="box-lbl lbl-ask">Preguntar</div><div class="box-text">Disculpa, necesito entender mejor esto. ¿Por qué decidieron acortar los plazos de pago?</div></div>
+    <div class="box"><div class="box-lbl lbl-say">Decir</div><div class="box-text">Entiendo que pagar rápido puede parecer una señal de orden y cumplimiento. Pero cuando la caja es un recurso escaso, lo que queremos es lo contrario: extender los plazos de pago de forma negociada. Cada día adicional que mantienes el dinero en la empresa es un día más de liquidez para operar. No se trata de no pagar, se trata de negociar cuándo y cómo. Los proveedores, en general, tienen mejores condiciones de crédito que nosotros, y aceptan plazos más largos si se les pide con anticipación y se cumple lo acordado. Eso sí: lo que no puedes hacer es acortar plazos cuando tienes caja y después atrasarte cuando no la tienes, eso daña la relación y se traduce en peores condiciones, cortes de despacho o fallas de aprovisionamiento.</div></div>
+  </div>
+
+  <div id="s4-3" class="slide">
+    <div class="slide-tag t-react">● Hacer + Decir</div>
+    <div class="slide-h">Calcular el impacto y replantear la estrategia.</div>
+    <div class="box"><div class="box-lbl" style="color:#854F0B;font-size:9px;letter-spacing:0.08em;text-transform:uppercase;font-weight:500;margin-bottom:4px">Hacer</div><div class="box-text">Calcular cuántos días de caja adicionales generaría extender los plazos con los 3 principales proveedores.</div></div>
+    <div class="box"><div class="box-lbl lbl-say">Decir</div><div class="box-text">Muchas empresas gestionan el pago a proveedores de forma reactiva, pagan cuando pueden, no cuando es estratégico. El objetivo debería ser extender los plazos de pago de forma negociada. Cada día adicional de plazo con un proveedor es un día más de liquidez en la empresa. No se trata de no pagar, se trata de negociar cuándo y cómo.</div></div>
+  </div>
+
+  <div id="s4-4" class="slide">
+    <div class="slide-tag t-close">● Cierre</div>
+    <div class="slide-h">Convertir el pago a proveedores en una decisión estratégica.</div>
+    <div class="box"><div class="box-lbl lbl-ask">Preguntar</div><div class="box-text">¿Cuántos días de caja ganarías si extiendes el plazo de pago con tu proveedor principal? ¿Cuándo vas a tener esa conversación?</div></div>
+  </div>
+
+  <div class="nav">
+    <a href="#" class="n-prev" id="bp-4" onclick="prev(4);return false;">← Anterior</a>
+    <a href="#" class="n-next" id="bn-4" onclick="next(4);return false;">Siguiente →</a>
+  </div>
+</div>
+
+
+<div id="p-card-5" class="page">
+  <div class="cv-top">
+    <button class="cv-back" onclick="closeCard()">← Índice</button>
+    <div class="cv-badge">BR 5</div>
+    <div class="cv-name">Planificación</div>
+  </div>
+  <div class="prog-track"><div class="prog-fill" id="prog-5"></div></div>
+  <div class="prog-label" id="lbl-5">1 de 5</div>
+
+  <div id="s5-0" class="slide on">
+    <div class="slide-tag t-sit">● Situación en sesión</div>
+    <div class="slide-h">La meta del primer trimestre es perder plata.</div>
+    <div class="slide-p">Al planificar el primer trimestre, el equipo da por sentado que van a perder plata en enero, febrero y marzo. La creencia instalada es que es normal y que ya se recuperará después.</div>
+    <div class="chip"><div class="chip-lbl">Frases frecuentes del cliente</div><div class="chip-text">"¿Para qué planificar, siempre perdemos plata?"</div></div>
+    <div class="chip"><div class="chip-text">"No tengamos meta de EBITDA, el primer trimestre siempre es negativo"</div></div>
+  </div>
+
+  <div id="s5-1" class="slide">
+    <div class="slide-tag t-why">● ¿Por qué es bandera roja?</div>
+    <div class="box"><div class="box-lbl lbl-think">Pensar</div><div class="box-text">Esta creencia se convierte en profecía autocumplida: no se hace esfuerzo comercial, no se visita clientes, no se cierra nada, y efectivamente se pierde plata. El 1er trimestre tiene potencial, solo hay que decidir aprovecharlo. No es un período de calentamiento, es el primer cuarto del marcador. Quien no planifica la caja de enero en diciembre, llega a febrero con restricciones que limitan sus decisiones por el resto del año: recursos comprometidos, con la competencia ya moviéndose y con una brecha que es muy difícil de remontar.</div></div>
+  </div>
+
+  <div id="s5-2" class="slide">
+    <div class="slide-tag t-react">● Reacción — preguntar</div>
+    <div class="slide-h">Vamos a planificar el primer trimestre.</div>
+    <div class="dialogo">
+      <div class="d-row"><div class="d-who d-coach">Coach</div><div class="d-text">Vamos a planificar el primer trimestre. ¿Cuál es la meta de EBITDA?</div></div>
+      <div class="d-row"><div class="d-who d-client">Cliente</div><div class="d-text cliente">Menos 50 millones.</div></div>
+      <div class="d-row"><div class="d-who d-coach">Coach</div><div class="d-text">¿Y por qué vamos a perder plata?</div></div>
+      <div class="d-row"><div class="d-who d-client">Cliente</div><div class="d-text cliente">Porque no hay ingresos y los costos siguen.</div></div>
+      <div class="d-row"><div class="d-who d-coach">Coach</div><div class="d-text">Entiendo. Ahora la pregunta real: ¿qué tendría que pasar para que ese trimestre no sea negativo? ¿Es posible, con el esfuerzo de todos, al menos llegar a cero?</div></div>
+    </div>
+  </div>
+
+  <div id="s5-3" class="slide">
+    <div class="slide-tag t-decir">● Decir</div>
+    <div class="slide-h">El que está, está disponible. La pregunta es si nosotros también estamos.</div>
+    <div class="box"><div class="box-lbl lbl-say">Decir</div><div class="box-text">Entiendo que en verano hay menos movimiento. Sin embargo, los clientes que se quedan tienen más tiempo, mejor ánimo y mayor disposición. Algunos toman vacaciones en enero y están en febrero, otros al revés. El que está, está disponible. La pregunta es si nosotros también estamos.<br><br>Yo te propongo algo: hagamos el esfuerzo consciente de mantener las reuniones, visitar clientes y hacer seguimiento durante estos meses. Diferenciémonos de la competencia que también se va de vacaciones. Si logramos un buen primer trimestre, vamos a lograr un buen año. Y si no resulta, lo intentamos, aprendemos y corregimos para el año siguiente. Pero no lo regalemos antes de intentarlo.<br><br>Tengo un cliente que durante años tuvo un primer trimestre negativo. Cuando decidimos trabajar el trimestre en serio, lograron el mejor primer trimestre de su historia —en 30 años— y ese año se convirtió en el mejor año que habían tenido.</div></div>
+  </div>
+
+  <div id="s5-4" class="slide">
+    <div class="slide-tag t-close">● Cierre</div>
+    <div class="slide-h">No regalemos el trimestre antes de intentarlo.</div>
+    <div class="box"><div class="box-lbl lbl-ask">Preguntar</div><div class="box-text">¿Qué tendría que pasar para que este trimestre no sea negativo? ¿Qué esfuerzo comercial podríamos hacer? ¿Les gustaría construir un plan concreto?</div></div>
+  </div>
+
+  <div class="nav">
+    <a href="#" class="n-prev" id="bp-5" onclick="prev(5);return false;">← Anterior</a>
+    <a href="#" class="n-next" id="bn-5" onclick="next(5);return false;">Siguiente →</a>
+  </div>
+</div>
+
+
+
 <script>
-var cur=0,TOT=6;
-function openCard(){
-  cur=0;
+var totals = {1:6, 2:4, 4:5, 5:6};
+var cursors = {1:0, 2:0, 4:0, 5:0};
+var active = 0;
+
+function openCard(n){
+  active = n;
+  cursors[n] = 0;
   document.getElementById('p-index').classList.remove('on');
-  document.getElementById('p-card').classList.add('on');
+  document.getElementById('p-card-'+n).classList.add('on');
   window.scrollTo(0,0);
-  render();
+  render(n);
 }
 function closeCard(){
-  document.getElementById('p-card').classList.remove('on');
+  document.getElementById('p-card-'+active).classList.remove('on');
   document.getElementById('p-index').classList.add('on');
   window.scrollTo(0,0);
 }
-function render(){
-  for(var i=0;i<TOT;i++){
-    var s=document.getElementById('s'+i);
+function render(n){
+  var tot = totals[n];
+  var cur = cursors[n];
+  for(var i=0;i<tot;i++){
+    var s=document.getElementById('s'+n+'-'+i);
     if(s) s.className='slide'+(i===cur?' on':'');
   }
-  document.getElementById('prog').style.width=(((cur+1)/TOT)*100)+'%';
-  document.getElementById('prog-lbl').textContent=(cur+1)+' de '+TOT;
-  var bp=document.getElementById('btn-p');
-  var bn=document.getElementById('btn-n');
+  document.getElementById('prog-'+n).style.width=(((cur+1)/tot)*100)+'%';
+  document.getElementById('lbl-'+n).textContent=(cur+1)+' de '+tot;
+  var bp=document.getElementById('bp-'+n);
+  var bn=document.getElementById('bn-'+n);
   bp.style.display=cur===0?'none':'flex';
-  if(cur===TOT-1){
+  if(cur===tot-1){
     bn.textContent='← Volver al índice';
     bn.onclick=function(){closeCard();return false;};
   } else {
     bn.textContent='Siguiente →';
-    bn.onclick=function(){next();return false;};
+    bn.onclick=function(){next(active);return false;};
   }
 }
-function next(){if(cur<TOT-1){cur++;render();window.scrollTo(0,0);}}
-function prev(){if(cur>0){cur--;render();window.scrollTo(0,0);}}
+function next(n){if(cursors[n]<totals[n]-1){cursors[n]++;render(n);window.scrollTo(0,0);}}
+function prev(n){if(cursors[n]>0){cursors[n]--;render(n);window.scrollTo(0,0);}}
 </script>
 </body>
 </html>
