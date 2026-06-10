@@ -107,7 +107,7 @@ a.n-next:active{background:#791F1F}
       <div class="row-arr">›</div>
     </div>
   </a>
-  <a href="#" class="row" onclick="return false;"><div class="row-left dim"></div><div class="row-inner"><div class="num"><span class="num-br">BR</span><span class="num-n">3</span></div><div class="row-text"><div class="row-title">Sin indicador de caja en el PEUP</div><div class="row-quote">Nunca lo hemos tenido</div></div><div class="soon-tag">Pronto</div></div></a>
+  <a href="#" class="row" onclick="openCard(3);return false;"><div class="row-left"></div><div class="row-inner"><div class="num"><span class="num-br">BR</span><span class="num-n">3</span></div><div class="row-text"><div class="row-title">Sin indicador de caja en el PEUP</div><div class="row-quote">Nunca lo hemos tenido</div></div><div class="row-arr">›</div></div></a>
   <a href="#" class="row" onclick="openCard(4);return false;"><div class="row-left"></div><div class="row-inner"><div class="num"><span class="num-br">BR</span><span class="num-n">4</span></div><div class="row-text"><div class="row-title">Redujeron el plazo de pago a proveedores</div><div class="row-quote">Mejoramos las cuentas por pagar</div></div><div class="row-arr">›</div></div></a>
 
   <div class="section-lbl">Planificación</div>
@@ -211,6 +211,51 @@ a.n-next:active{background:#791F1F}
   </div>
 </div>
 
+
+<!-- CARRUSEL BR3 -->
+<div id="p-card-3" class="page">
+  <div class="cv-top">
+    <button class="cv-back" onclick="closeCard()">← Índice</button>
+    <div class="cv-badge">BR 3</div>
+    <div class="cv-name">Gestión de caja</div>
+  </div>
+  <div class="prog-track"><div class="prog-fill" id="prog-3"></div></div>
+  <div class="prog-label" id="lbl-3">1 de 5</div>
+
+  <div id="s3-0" class="slide">
+    <div class="slide-tag t-sit">● Situación en sesión</div>
+    <div class="slide-h">El cliente no tiene un indicador de caja en el PEUP y hay resistencia pues nunca lo han tenido.</div>
+    <div class="chip"><div class="chip-lbl">Frase frecuente del cliente</div><div class="chip-text">"No, si la caja está bien, no es necesario"</div></div>
+  </div>
+
+  <div id="s3-1" class="slide">
+    <div class="slide-tag t-why">● ¿Por qué es bandera roja?</div>
+    <div class="box"><div class="box-lbl lbl-think">Pensar</div><div class="box-text">La resistencia a medir la caja suele venir de que nunca la han medido, no de que no sea importante. Si no hay un indicador de caja en el PEUP, estamos gestionando a ciegas uno de los recursos más críticos del negocio.</div></div>
+  </div>
+
+  <div id="s3-2" class="slide">
+    <div class="slide-tag t-react">● Reacción — decir</div>
+    <div class="slide-h">La caja es el recurso más crítico del negocio.</div>
+    <div class="box"><div class="box-lbl lbl-say">Decir</div><div class="box-text">Lo más importante de todo lo que hacemos es la generación de caja. Las empresas quiebran más por indigestión que por hambre: quiebran más por exceso de venta que por falta de ella. Crecer demanda caja, y si no la tienes, el crecimiento mismo se convierte en el problema. Por eso es crítico medirla.<br><br>Cuando no hay caja es cuando lo pasamos mal: dejamos de ser estratégicos, tomamos decisiones reactivas y hay ansiedad en el ambiente. Y esto no es solo responsabilidad del gerente de finanzas, todas las decisiones del equipo impactan la caja, y por eso todos necesitan entenderla e incorporarla en nuestras decisiones. Para lograr esto, es relevante que tengamos un indicador de caja.</div></div>
+  </div>
+
+  <div id="s3-3" class="slide">
+    <div class="slide-tag t-decir">● Los 4 indicadores clave</div>
+    <div class="slide-h">Hay cuatro indicadores clave de cuánto tenemos de caja.</div>
+    <div class="box"><div class="box-lbl lbl-say">Decir</div><div class="box-text">Hay cuatro indicadores clave de cuánto tenemos de caja en la cuenta corriente, entre los que puedes elegir el más crítico para incluir en el PEUP.<br><br>Primero, los meses de caja: ¿cuántos meses de costo operacional tienen cubiertos hoy? Es muy distinto tener 2 meses que 10. Segundo, los días de cuentas por cobrar: ¿cuántos días de venta tienen en la calle sin cobrar? Si el plazo acordado con clientes es 30 días y tienen 60 pendientes, hay un problema de cobranza. Tercero, el inventario: cada millón de pesos en inventario es un millón que podría estar en el banco, hay que mantenerlo operacionalmente suficiente, pero lo más bajo posible. Cuarto, las cuentas por pagar: hay que saber si están pagando dentro del plazo acordado. Si se atrasan, les pueden cortar los despachos; si pagan antes del plazo, están regalando caja. El objetivo es cumplir lo acordado y siempre buscar ampliarlo.</div></div>
+  </div>
+
+  <div id="s3-4" class="slide">
+    <div class="slide-tag t-close">● Cierre</div>
+    <div class="slide-h">Es importante identificar el número crítico para darle seguimiento.</div>
+    <div class="box"><div class="box-lbl lbl-ask">Preguntar</div><div class="box-text">¿Cuál es el indicador más relevante para este negocio? ¿Cuántos meses de caja quieres tener como colchón mínimo? ¿Cuántos tienes hoy? ¿Ponemos ese número en el PEUP? ¿Qué tendría que pasar en el negocio para llegar a ese número?</div></div>
+  </div>
+
+  <div class="nav">
+    <a href="#" class="n-prev" id="bp-3" onclick="prev(3);return false;">← Anterior</a>
+    <a href="#" class="n-next" id="bn-3" onclick="next(3);return false;">Siguiente →</a>
+  </div>
+</div>
 
 <!-- CARRUSEL BR6 -->
 <div id="p-card-4" class="page">
@@ -316,8 +361,8 @@ a.n-next:active{background:#791F1F}
 </div><!-- fin .app -->
 
 <script>
-var totals = {1:6, 2:4, 4:5, 5:5};
-var cursors = {1:0, 2:0, 4:0, 5:0};
+var totals = {1:6, 2:4, 3:5, 4:5, 5:5};
+var cursors = {1:0, 2:0, 3:0, 4:0, 5:0};
 var active = 0;
 
 function openCard(n){
